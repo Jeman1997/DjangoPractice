@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question Detail</title>
+  </head>
+  <body>
+  <h1>{{question.queston_text}}</h1>
+  <ul>
+    {%for choice in question.choice_set_all%}
+    <li>{{choice.choice_text}}</li>
+  </ul>
+  </body>
+</html>
