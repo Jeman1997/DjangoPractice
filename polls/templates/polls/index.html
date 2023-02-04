@@ -5,6 +5,14 @@
     <title>Polls</title>
   </head>
   <body>
-    {{que_list}}
+{%if que_list%}
+  <ul>
+    {%for ques in que_list%}
+    <li> <a href="{%url 'polls:detail' ques.id%}">{{ques.question_text}}</a> </li>
+    {%endfor%}
+{%else%}
+  <p>No polls are available.</p>
+{%endif%}
+  </ul>
   </body>
 </html>
